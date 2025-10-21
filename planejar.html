@@ -4,27 +4,29 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Planejar</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <header>    
-        <h1>Seg | Ter | Qua</h1>
-    </header>
-    <main>
-        <h1>Segunda:</h1>
-        <ol>
-            <li>Ovos => 8:00</li>
-            <li><a href="comida.html">Macarrão</a> => 12:30</li>
-            <li>Sanduíche => 15:00</li>
-            <li>Risoto => 19:30</li>
-        </ol>
-    </main>
-    <footer>
-                <img src="img/Captura de tela 2025-09-05 113028.png">
-                <img src="img/Captura de tela 2025-09-05 113028.png">
-                <img src="img/Captura de tela 2025-09-05 113028.png">
-                <h2>Configurações</h2>
-                <h2>Inicio</h2>
-                <h2>Favoritos</h2>
-    </footer>
+<header><h1>Seg | Ter | Qua</h1></header>
+<main>
+  <section class="card">
+    <h2>Segunda</h2>
+    <ol class="plan-list">
+      <li>Ovos <span class="time-badge">08:00</span></li>
+      <li><a class="block-link" href="comida.html">Macarrão</a> <span class="time-badge">12:30</span></li>
+      <li>Sanduíche <span class="time-badge">15:00</span></li>
+      <li>Risoto <span class="time-badge">19:30</span></li>
+    </ol>
+  </section>
+</main>
+
+<footer class="tabbar">
+  <nav>
+    <a class="tab" href="index.html"><img src="img/Captura..." alt="Início"><span>Início</span></a>
+    <a class="tab active" href="planejar.html"><img src="img/Captura..." alt="Planejar"><span>Planejar</span></a>
+    <a class="tab" href="receitas.html"><img src="img/Captura..." alt="Receitas"><span>Receitas</span></a>
+  </nav>
+</footer>
 </body>
 </html>

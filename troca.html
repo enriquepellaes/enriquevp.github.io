@@ -4,30 +4,34 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Trocas</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <header>    
-        <h1>Macarrão</h1>
-        <h3>(10 minutos)</h3>
-    </header>
-    <main>
-        <h1>Ingredientes</h1>
-        <img src="img/Captura de tela 2025-09-05 112016.png">
-        <h2>
-            Macarrão (Em estoque)
-            Tomate (Em estoque)
-            Alho (Em estoque)
-            Carne moida (Em Falta)
-            Trocar por: Frango ou Linguiça 
-        </h2>
-    </main>
-    <footer>
-                <img src="img/Captura de tela 2025-09-05 113028.png">
-                <img src="img/Captura de tela 2025-09-05 113028.png">
-                <img src="img/Captura de tela 2025-09-05 113028.png">
-                <h2>Planejar</h2>
-                <h2>Inicio</h2>
-                <h2>Favoritos</h2>
-    </footer>
+<header>
+  <h1>Macarrão <span class="subtle">(10 minutos)</span></h1>
+</header>
+
+<main class="grid">
+  <section class="card">
+    <h2>Ingredientes</h2>
+    <img src="img/Captura de tela 2025-09-05 112016.png" alt="Imagem ilustrativa do macarrão" class="w-100 rounded shadow mb-2">
+    <div class="ingredients">
+      <p>Macarrão (Em estoque)</p>
+      <p>Tomate (Em estoque)</p>
+      <p>Alho (Em estoque)</p>
+      <p>Carne moída (Em falta)</p>
+      <p><strong>Trocar por:</strong> Frango ou Linguiça</p>
+    </div>
+  </section>
+</main>
+
+<footer class="tabbar">
+  <nav>
+    <a class="tab" href="index.html"><img src="img/Captura..." alt="Início"><span>Início</span></a>
+    <a class="tab" href="planejar.html"><img src="img/Captura..." alt="Planejar"><span>Planejar</span></a>
+    <a class="tab" href="receitas.html"><img src="img/Captura..." alt="Receitas"><span>Receitas</span></a>
+  </nav>
+</footer>
 </body>
 </html>
