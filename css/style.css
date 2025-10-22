@@ -19,6 +19,8 @@
   --space-4: 2rem;
 
   --tabbar-h: 4.25rem;
+
+  --mf-border-1: 0.0625rem; 
 }
 
 html { font-size: 100%; }
@@ -41,7 +43,7 @@ header{
   gap: var(--space-2);
   padding: var(--space-2);
   background: var(--mf-sky);
-  border-bottom: 0.0625rem solid rgba(0,0,0,.06);
+  border-bottom: var(--mf-border-1) solid rgba(0,0,0,.06); 
 }
 header img{ width: 2rem; height: 2rem; object-fit: cover; }
 main{ padding: var(--space-2); padding-bottom: calc(var(--tabbar-h) + var(--space-2)); }
@@ -102,7 +104,7 @@ footer.tabbar{
   left: 0; right: 0; bottom: 0;
   height: var(--tabbar-h);
   background: var(--mf-white);
-  border-top: 0.0625rem solid rgba(0,0,0,.08);
+  border-top: var(--mf-border-1) solid rgba(0,0,0,.08); 
   display: flex; justify-content: space-around; align-items: center;
   padding: .25rem var(--space-2);
 }
