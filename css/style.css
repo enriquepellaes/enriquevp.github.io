@@ -1,7 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Kalam:wght@400;700&family=Open+Sans:wght@400;600;700&display=swap');
 
 :root{
-  /* Cores */
   --mf-primary: #17B6B2;
   --mf-green:   #A5C311;
   --mf-greenlt: #86B7A5;
@@ -187,7 +186,6 @@ footer.tabbar .tab img {
 .mt-2 { margin-top: var(--space-2); }
 .hero-img { width: 100%; border-radius: var(--mf-radius); box-shadow: var(--mf-shadow); }
 
-/* ===== Tela de receita ===== */
 
 .receita-hero {
   display: flex;
@@ -196,8 +194,8 @@ footer.tabbar .tab img {
 }
 
 .receita-hero img {
-  width: 50%;                 /* metade da largura disponível */
-  max-width: 12rem;           /* limite opcional pra não ficar gigante em telas grandes */
+  width: 50%;      
+  max-width: 12rem; 
   border-radius: var(--mf-radius);
   box-shadow: var(--mf-shadow);
   object-fit: cover;
@@ -222,7 +220,6 @@ footer.tabbar .tab img {
   gap: .5rem;
 }
 
-/* listas de ingredientes e modo de preparo em formato de lista sem mudar o visual geral */
 .ingredients-list,
 .steps-list {
   padding-left: 1.2rem;
@@ -233,7 +230,6 @@ footer.tabbar .tab img {
   margin-bottom: .25rem;
 }
 
-/* ===== Modal de trocas ===== */
 
 .modal {
   position: fixed;
@@ -289,11 +285,10 @@ footer.tabbar .tab img {
   font-size: .9rem;
 }
 
-/* ===== Estoque ===== */
 
 .estoque-list{
   display: grid;
-  gap: 1.1rem;              /* mais espaço entre os ingredientes */
+  gap: 1.1rem;              
   margin-top: 1rem;
   padding-left: 0;
   list-style: none;
@@ -303,10 +298,10 @@ footer.tabbar .tab img {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background: #f8fafc;      /* fundo clarinho */
+  background: #f8fafc;     
   border-radius: var(--mf-radius);
-  padding: 1rem 1.25rem;    /* mais “respiro” interno */
-  border: 1px solid #e2e8f0;/* borda leve para separar visualmente */
+  padding: 1rem 1.25rem;    
+  border: 1px solid #e2e8f0;
 }
 
 .estoque-item .item-name{
@@ -331,18 +326,17 @@ footer.tabbar .tab img {
 
 .unit-label{
   font-size: 0.85rem;
-  color: #64748b;           /* cinza suave pra unidade */
+  color: #64748b;
 }
 
 
-/* Responsivo da tela de receita */
 @media (max-width: 40rem) {
   .receita-hero {
     gap: var(--space-1);
   }
 
   .receita-hero img {
-    width: 50%;   /* continua ocupando metade da largura */
+    width: 50%;   
     max-width: none;
   }
 }
