@@ -56,6 +56,46 @@ section{ margin-bottom: var(--space-3); }
   padding: var(--space-2);
 }
 
+.card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+}
+
+.card-header h2 {
+  margin: 0;
+}
+
+.card-arrow {
+  text-decoration: none;
+  font-size: 1.5rem;
+  line-height: 1;
+}
+
+.img-row {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 0.75rem;
+}
+
+.receita-home {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  font-size: 0.75rem;
+  text-align: center;
+}
+
+.receita-home img {
+  width: 100%;
+  border-radius: 0.5rem;
+  display: block;
+}
+
+
 .img-row{
   display: flex;
   gap: var(--space-2);
@@ -86,7 +126,7 @@ section{ margin-bottom: var(--space-3); }
   padding: .25rem .75rem;
 }
 
-.recipe-title{ color: var(--mf-primary); }
+.receita-title{ color: var(--mf-primary); }
 .subtle{ color: #444; opacity: .8; }
 .ingredients, .steps{
   display: grid; gap: .5rem;
@@ -99,21 +139,33 @@ section{ margin-bottom: var(--space-3); }
 .block-link{ display: block; text-decoration: none; color: inherit; }
 .block-link:hover{ filter: brightness(.98); }
 
-footer.tabbar{
+footer.tabbar {
   position: fixed;
-  left: 0; right: 0; bottom: 0;
-  height: var(--tabbar-h);
-  background: var(--mf-white);
-  border-top: var(--mf-border-1) solid rgba(0,0,0,.08); 
-  display: flex; justify-content: space-around; align-items: center;
-  padding: .25rem var(--space-2);
+  bottom: 0;
+  left: 0;
+  width: 100%;
 }
-.tabbar a.tab{
-  display: flex; flex-direction: column; align-items: center; gap: .25rem;
-  text-decoration: none; color: #333; font-size: .85rem; font-weight: 600;
+
+footer.tabbar nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
 }
-.tabbar a.tab img{ width: 1.75rem; height: 1.75rem; object-fit: cover; }
-.tabbar a.tab.active{ color: var(--mf-primary); }
+
+footer.tabbar .tab {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+}
+
+footer.tabbar .tab img {
+  width: 1.7rem;
+  height: 1.7rem;
+  flex-shrink: 0;
+}
+
 
 .btn{
   display: inline-flex; align-items: center; justify-content: center;
@@ -134,6 +186,166 @@ footer.tabbar{
 .mb-2 { margin-bottom: var(--space-2); }
 .mt-2 { margin-top: var(--space-2); }
 .hero-img { width: 100%; border-radius: var(--mf-radius); box-shadow: var(--mf-shadow); }
+
+/* ===== Tela de receita ===== */
+
+.receita-hero {
+  display: flex;
+  gap: var(--space-2);
+  align-items: flex-start;
+}
+
+.receita-hero img {
+  width: 50%;                 /* metade da largura disponível */
+  max-width: 12rem;           /* limite opcional pra não ficar gigante em telas grandes */
+  border-radius: var(--mf-radius);
+  box-shadow: var(--mf-shadow);
+  object-fit: cover;
+}
+
+.receita-meta {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: .25rem;
+}
+
+.receita-tags {
+  font-size: .85rem;
+  color: #666;
+}
+
+.receita-actions {
+  margin-top: .75rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: .5rem;
+}
+
+/* listas de ingredientes e modo de preparo em formato de lista sem mudar o visual geral */
+.ingredients-list,
+.steps-list {
+  padding-left: 1.2rem;
+}
+
+.ingredients-list li,
+.steps-list li {
+  margin-bottom: .25rem;
+}
+
+/* ===== Modal de trocas ===== */
+
+.modal {
+  position: fixed;
+  inset: 0;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 50;
+}
+
+.modal.open {
+  display: flex;
+}
+
+.modal-backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,.4);
+}
+
+.modal-content {
+  position: relative;
+  background: var(--mf-white);
+  padding: var(--space-2);
+  margin: var(--space-2);
+  max-width: 25rem;
+  width: 100%;
+  border-radius: var(--mf-radius);
+  box-shadow: 0 1rem 1.5rem rgba(0,0,0,.25);
+  z-index: 51;
+}
+
+.swap-ingredient-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .5rem;
+  margin-top: .5rem;
+}
+
+.btn-outline {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 999rem;
+  border: var(--mf-border-1) solid #ccc;
+  background: var(--mf-white);
+  padding: .35rem .75rem;
+  font-size: .85rem;
+}
+
+.swap-result {
+  margin-top: .75rem;
+  font-size: .9rem;
+}
+
+/* ===== Estoque ===== */
+
+.estoque-list{
+  display: grid;
+  gap: 1.1rem;              /* mais espaço entre os ingredientes */
+  margin-top: 1rem;
+  padding-left: 0;
+  list-style: none;
+}
+
+.estoque-item{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #f8fafc;      /* fundo clarinho */
+  border-radius: var(--mf-radius);
+  padding: 1rem 1.25rem;    /* mais “respiro” interno */
+  border: 1px solid #e2e8f0;/* borda leve para separar visualmente */
+}
+
+.estoque-item .item-name{
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+.estoque-qty{
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.estoque-qty input{
+  width: 5.5rem;
+  padding: 0.3rem 0.45rem;
+  border-radius: 0.4rem;
+  border: 1px solid #cbd5f5;
+  font-size: 0.9rem;
+  text-align: right;
+}
+
+.unit-label{
+  font-size: 0.85rem;
+  color: #64748b;           /* cinza suave pra unidade */
+}
+
+
+/* Responsivo da tela de receita */
+@media (max-width: 40rem) {
+  .receita-hero {
+    gap: var(--space-1);
+  }
+
+  .receita-hero img {
+    width: 50%;   /* continua ocupando metade da largura */
+    max-width: none;
+  }
+}
 
 
 @media (min-width: 40rem){

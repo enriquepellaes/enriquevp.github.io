@@ -1,32 +1,91 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Planejar</title>
-    <link rel="stylesheet" href="css/reset.css">
-    <link rel="stylesheet" href="css/style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Planejar</title>
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/style.css">
 </head>
-<body>
-<header><h1>Seg | Ter | Qua</h1></header>
+<body data-page="plan">
+<header>
+  <h1>Planejar refeições</h1>
+</header>
+
 <main>
   <section class="card">
-    <h2>Segunda</h2>
-    <ol class="plan-list">
-      <li>Ovos <span class="time-badge">08:00</span></li>
-      <li><a class="block-link" href="comida.html">Macarrão</a> <span class="time-badge">12:30</span></li>
-      <li>Sanduíche <span class="time-badge">15:00</span></li>
-      <li>Risoto <span class="time-badge">19:30</span></li>
+    <h2>Seu planejamento</h2>
+
+    <div class="dia-filter-row">
+      <label for="dia-filter">Dia da semana</label>
+      <select id="dia-filter">
+        <option value="all">Todos</option>
+        <option value="1">Segunda</option>
+        <option value="2">Terça</option>
+        <option value="3">Quarta</option>
+        <option value="4">Quinta</option>
+        <option value="5">Sexta</option>
+        <option value="6">Sábado</option>
+        <option value="0">Domingo</option>
+      </select>
+    </div>
+
+    <ol class="plan-list" id="plan-list">
+      <!-- preenchido via JS -->
     </ol>
+
+    <button type="button" class="btn mt-2" id="open-plan-modal">
+      Agendar nova receita
+    </button>
   </section>
 </main>
 
+<!-- Modal de agendamento -->
+<div id="plan-modal" class="modal">
+  <div class="modal-backdrop"></div>
+  <div class="modal-content">
+    <h2>Agendar receita</h2>
+    <form id="plan-form" class="grid">
+      <label>
+        Receita
+        <select id="plan-receita" required></select>
+      </label>
+
+      <label>
+        Data
+        <input type="date" id="plan-date" required>
+      </label>
+
+      <label>
+        Horário
+        <input type="time" id="plan-time" required>
+      </label>
+
+      <div class="row">
+        <button type="button" class="btn secondary" id="plan-cancel">Cancelar</button>
+        <button type="submit" class="btn">Salvar</button>
+      </div>
+    </form>
+  </div>
+</div>
+
 <footer class="tabbar">
   <nav>
-    <a class="tab" href="index.html"><img src="img/Captura..." alt="Início"><span>Início</span></a>
-    <a class="tab active" href="planejar.html"><img src="img/Captura..." alt="Planejar"><span>Planejar</span></a>
-    <a class="tab" href="receitas.html"><img src="img/Captura..." alt="Receitas"><span>Receitas</span></a>
+    <a class="tab" href="index.html">
+      <img src="img/home.png" alt="Início">
+      <span>Início</span>
+    </a>
+    <a class="tab active" href="planejar.html">
+      <img src="img/calendar.png" alt="Planejar">
+      <span>Planejar</span>
+    </a>
+    <a class="tab" href="estoque.html">
+      <img src="img/estoque.png" alt="Estoque">
+      <span>Estoque</span>
+    </a>
   </nav>
 </footer>
+
+<script src="js/app.js"></script>
 </body>
 </html>

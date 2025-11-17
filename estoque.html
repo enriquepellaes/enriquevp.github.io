@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Estoque</title>
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="stock">
+<header>
+  <h1>Estoque</h1>
+</header>
+
+<main>
+  <section class="card">
+    <h2>Ingredientes em casa</h2>
+    <p class="muted">
+      Ajuste as quantidades conforme o que você tem em casa. As unidades já seguem
+      medidas que fazem sentido para cada ingrediente.
+    </p>
+
+    <ul id="estoque-list" class="estoque-list">
+      <!-- preenchido via JS -->
+    </ul>
+
+    <button type="button" class="btn mt-2" id="open-add-ingredient">
+      Adicionar ingrediente
+    </button>
+  </section>
+</main>
+
+<!-- Modal de adicionar ingrediente -->
+<div id="add-ingredient-modal" class="modal">
+  <div class="modal-backdrop"></div>
+  <div class="modal-content">
+    <h2>Adicionar ingrediente</h2>
+    <p id="add-ingredient-message">
+      Escolha um ingrediente das receitas para adicionar ao seu estoque.
+    </p>
+    <div id="disponivel-ingredients" class="swap-ingredient-list">
+      <!-- botões gerados via JS -->
+    </div>
+    <button type="button" class="btn mt-2" id="add-ingredient-close">Fechar</button>
+  </div>
+</div>
+
+<footer class="tabbar">
+  <nav>
+    <a class="tab" href="index.html">
+      <img src="img/home.png" alt="Início">
+      <span>Início</span>
+    </a>
+    <a class="tab" href="planejar.html">
+      <img src="img/calendar.png" alt="Planejar">
+      <span>Planejar</span>
+    </a>
+    <a class="tab active" href="estoque.html">
+      <img src="img/estoque.png" alt="Estoque">
+      <span>Estoque</span>
+    </a>
+  </nav>
+</footer>
+
+<script src="js/app.js"></script>
+</body>
+</html>

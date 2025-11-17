@@ -4,40 +4,62 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>inicio</title>
-        <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
-<body>
+<body data-page="home">
 <header>
-  <img src="img/Captura de tela 2025-09-05 105915.png" alt="Logo MealFlow">
+  <img src="img/logo (2).png" alt="Logo MealFlow">
   <h1>MealFlow</h1>
 </header>
 
 <main>
   <section class="card">
-    <a class="block-link" href="receitas.html">
-      <h2>Com pressa?</h2>
-      <div class="img-row">
-        <img src="img/Captura de tela 2025-09-05 112016.png" alt="Sugestão 1">
-        <img src="img/Captura de tela 2025-09-05 112016.png" alt="Sugestão 2">
-        <img src="img/Captura de tela 2025-09-05 112016.png" alt="Sugestão 3">
-      </div>
+  <div class="card-header">
+    <h2>Com pressa?</h2>
+    <a href="receitas.html"
+       class="card-arrow"
+       aria-label="Ver todas as receitas">
+      ➜
     </a>
-  </section>
+  </div>
 
-  <section class="card">
-    <h2>Gostou? Repita!</h2>
-    <div class="img-row">
-      <img src="img/Captura de tela 2025-09-05 112016.png" alt="Favorito 1">
-      <img src="img/Captura de tela 2025-09-05 112016.png" alt="Favorito 2">
-      <img src="img/Captura de tela 2025-09-05 112016.png" alt="Favorito 3">
-    </div>
-  </section>
+  <div class="img-row">
+    <a href="macarrao.html" class="receita-home">
+      <img src="img/Macarrao.png" alt="Macarrão rápido">
+      <span>Macarrão</span>
+    </a>
+
+    <a href="poke.html" class="receita-home">
+      <img src="img/Poke.png" alt="Poke prático">
+      <span>Poke</span>
+    </a>
+
+    <a href="omelete.html" class="receita-home">
+      <img src="img/Omelete.png" alt="Omelete rápida">
+      <span>Omelete</span>
+    </a>
+  </div>
+</section>
+
+<section class="card">
+  <h2>Gostou? Repita!</h2>
+
+  <p id="favoritos-empty" class="muted">
+    Você ainda não favoritou nenhuma receita.
+  </p>
+
+  <div id="favoritos-list" class="img-row">
+  </div>
+</section>
+
 
   <section class="card">
     <a class="block-link" href="planejar.html">
       <h2>Próximas refeições</h2>
-    <img src="img/Captura de tela 2025-09-05 112403.png" alt="Planejamento semanal" class="hero-img">
+      <img src="img/calendario.png"
+           alt="Planejamento semanal"
+           class="hero-img">
     </a>
   </section>
 </main>
@@ -45,18 +67,22 @@
 <footer class="tabbar">
   <nav>
     <a class="tab active" href="index.html">
-      <img src="img/Captura de tela 2025-09-05 113028.png" alt="Início">
+      <img src="img/home.png" alt="Início">
       <span>Início</span>
     </a>
     <a class="tab" href="planejar.html">
-      <img src="img/Captura de tela 2025-09-05 113028.png" alt="Planejar">
+      <img src="img/calendar.png" alt="Planejar">
       <span>Planejar</span>
     </a>
-    <a class="tab" href="receitas.html">
-      <img src="img/Captura de tela 2025-09-05 113028.png" alt="Receitas">
-      <span>Receitas</span>
+    <a class="tab" href="estoque.html">
+      <img src="img/estoque.png" alt="Estoque">
+      <span>Estoque</span>
     </a>
   </nav>
 </footer>
+
+
+
+<script src="js/app.js"></script>
 </body>
 </html>

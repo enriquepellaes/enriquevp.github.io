@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Poke de salmão</title>
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="receita-detail">
+<header>
+  <h1>Poke de salmão</h1>
+</header>
+
+<main class="grid">
+  <section class="card receita-hero"
+           data-receita-id="poke"
+           data-receita-name="Poke de salmão"
+           data-receita-image="img/Poke.png"
+           data-receita-time="15 minutos"
+           data-receita-servings="2 porções">
+    <img src="img/Poke.png" alt="Poke de salmão">
+    <div class="receita-meta">
+      <h2>Poke de salmão</h2>
+      <p class="receita-tags">⏱ 15 minutos · 🍽 2 porções</p>
+      <div class="receita-actions">
+        <button type="button" class="btn" id="favorite-btn">Salvar nos favoritos</button>
+        <button type="button" class="btn secondary" id="swap-btn">Ver trocas</button>
+      </div>
+    </div>
+  </section>
+
+  <section class="card">
+    <h2>Ingredientes</h2>
+    <ul class="ingredients-list">
+      <li>1 xícara de salada de grãos (quinoa, grão-de-bico, etc.)</li>
+      <li>1 xícara de filé de salmão fresco em cubos</li>
+      <li>1 manga em cubos</li>
+      <li>1 pepino em fatias finas</li>
+      <li>1 rabanete em fatias finas</li>
+      <li>2 colheres (sopa) de gergelim</li>
+      <li>1/2 xícara de brotos (alfafa, por exemplo)</li>
+      <li>2 cebolinhas fatiadas</li>
+      <li>Molho de sua preferência (shoyu, limão, etc.)</li>
+    </ul>
+  </section>
+
+  <section class="card">
+    <h2>Modo de preparo</h2>
+    <ol class="steps-list">
+      <li>Coloque a salada de grãos já cozida no fundo de uma tigela.</li>
+      <li>Distribua por cima o salmão em cubos, a manga, o pepino, o rabanete, os brotos e a cebolinha.</li>
+      <li>Polvilhe o gergelim e regue com o molho escolhido (shoyu, limão, óleo de gergelim, etc.).</li>
+      <li>Misture levemente na hora de comer.</li>
+    </ol>
+  </section>
+</main>
+
+<div id="swap-modal" class="modal">
+  <div class="modal-backdrop"></div>
+  <div class="modal-content">
+    <h2>Trocas de ingredientes</h2>
+    <p id="swap-message">Escolha um ingrediente para ver as opções de troca disponíveis.</p>
+    <div id="swap-ingredient-list" class="swap-ingredient-list"></div>
+    <div id="swap-result" class="swap-result"></div>
+    <button type="button" class="btn mt-2" id="swap-close">Fechar</button>
+  </div>
+</div>
+
+<footer class="tabbar">
+  <nav>
+    <a class="tab" href="index.html">
+      <img src="img/home.png" alt="Início">
+      <span>Início</span>
+    </a>
+    <a class="tab" href="planejar.html">
+      <img src="img/calendar.png" alt="Planejar">
+      <span>Planejar</span>
+    </a>
+    <a class="tab" href="estoque.html">
+      <img src="img/estoque.png" alt="Estoque">
+      <span>Estoque</span>
+    </a>
+  </nav>
+</footer>
+
+<script src="js/app.js"></script>
+</body>
+</html>

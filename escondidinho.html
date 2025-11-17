@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Escondidinho de carne moída</title>
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="receita-detail">
+<header>
+  <h1>Escondidinho de carne moída</h1>
+</header>
+
+<main class="grid">
+  <section class="card receita-hero"
+           data-receita-id="escondidinho"
+           data-receita-name="Escondidinho de carne moída"
+           data-receita-image="img/Escondidinho.png"
+           data-receita-time="40 minutos"
+           data-receita-servings="8 porções">
+    <img src="img/Escondidinho.png" alt="Escondidinho de carne moída">
+    <div class="receita-meta">
+      <h2>Escondidinho de carne moída</h2>
+      <p class="receita-tags">⏱ 40 minutos · 🍽 8 porções</p>
+      <div class="receita-actions">
+        <button type="button" class="btn" id="favorite-btn">Salvar nos favoritos</button>
+        <button type="button" class="btn secondary" id="swap-btn">Ver trocas</button>
+      </div>
+    </div>
+  </section>
+
+  <section class="card">
+    <h2>Ingredientes</h2>
+    <ul class="ingredients-list">
+      <li>1 kg de batata</li>
+      <li>500 g de carne moída</li>
+      <li>200 g de queijo mussarela</li>
+      <li>Azeite para refogar</li>
+      <li>1 cebola picada</li>
+      <li>1 dente de alho amassado</li>
+      <li>Sal e pimenta a gosto</li>
+      <li>Cheiro-verde a gosto</li>
+      <li>Leite e manteiga quanto baste para o purê (opcional)</li>
+    </ul>
+  </section>
+
+  <section class="card">
+    <h2>Modo de preparo</h2>
+    <ol class="steps-list">
+      <li>Cozinhe as batatas em água até ficarem macias. Escorra e amasse, fazendo um purê (se quiser, junte um pouco de leite e manteiga).</li>
+      <li>Refogue a cebola no azeite, acrescente o alho e depois a carne moída, mexendo até dourar.</li>
+      <li>Tempere a carne com sal, pimenta e cheiro-verde e deixe secar um pouco o líquido.</li>
+      <li>Em um refratário, faça uma camada de purê, outra de carne moída e cubra com o restante do purê.</li>
+      <li>Finalize com a mussarela por cima e leve ao forno até gratinar.</li>
+    </ol>
+  </section>
+</main>
+
+<div id="swap-modal" class="modal">
+  <div class="modal-backdrop"></div>
+  <div class="modal-content">
+    <h2>Trocas de ingredientes</h2>
+    <p id="swap-message">Escolha um ingrediente para ver as opções de troca disponíveis.</p>
+    <div id="swap-ingredient-list" class="swap-ingredient-list"></div>
+    <div id="swap-result" class="swap-result"></div>
+    <button type="button" class="btn mt-2" id="swap-close">Fechar</button>
+  </div>
+</div>
+
+<footer class="tabbar">
+  <nav>
+    <a class="tab" href="index.html">
+      <img src="img/home.png" alt="Início">
+      <span>Início</span>
+    </a>
+    <a class="tab" href="planejar.html">
+      <img src="img/calendar.png" alt="Planejar">
+      <span>Planejar</span>
+    </a>
+    <a class="tab" href="estoque.html">
+      <img src="img/estoque.png" alt="Estoque">
+      <span>Estoque</span>
+    </a>
+  </nav>
+</footer>
+
+
+<script src="js/app.js"></script>
+</body>
+</html>

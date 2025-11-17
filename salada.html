@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Salada simples</title>
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="receita-detail">
+<header>
+  <h1>Salada simples</h1>
+</header>
+
+<main class="grid">
+  <section class="card receita-hero"
+           data-receita-id="salada"
+           data-receita-name="Salada simples"
+           data-receita-image="img/Salada.png"
+           data-receita-time="25 minutos"
+           data-receita-servings="6 porções">
+    <img src="img/Salada.png" alt="Salada simples">
+    <div class="receita-meta">
+      <h2>Salada simples</h2>
+      <p class="receita-tags">⏱ 25 minutos · 🍽 6 porções</p>
+      <div class="receita-actions">
+        <button type="button" class="btn" id="favorite-btn">Salvar nos favoritos</button>
+        <button type="button" class="btn secondary" id="swap-btn">Ver trocas</button>
+      </div>
+    </div>
+  </section>
+
+  <section class="card">
+    <h2>Ingredientes</h2>
+    <ul class="ingredients-list">
+      <li>1 alface americana</li>
+      <li>2 cenouras raladas</li>
+      <li>1 beterraba ralada</li>
+      <li>1 tomate sem pele e sem sementes, picado</li>
+      <li>1 cebola em rodelas ou picada</li>
+      <li>Sal, azeite e vinagre ou limão a gosto</li>
+    </ul>
+  </section>
+
+  <section class="card">
+    <h2>Modo de preparo</h2>
+    <ol class="steps-list">
+      <li>Lave bem todos os ingredientes.</li>
+      <li>Pique ou rasgue as folhas de alface.</li>
+      <li>Rale a cenoura e a beterraba.</li>
+      <li>Pique o tomate e a cebola.</li>
+      <li>Misture tudo em uma saladeira e tempere com sal, azeite e vinagre ou limão na hora de servir.</li>
+    </ol>
+  </section>
+</main>
+
+<div id="swap-modal" class="modal">
+  <div class="modal-backdrop"></div>
+  <div class="modal-content">
+    <h2>Trocas de ingredientes</h2>
+    <p id="swap-message">Escolha um ingrediente para ver as opções de troca disponíveis.</p>
+    <div id="swap-ingredient-list" class="swap-ingredient-list"></div>
+    <div id="swap-result" class="swap-result"></div>
+    <button type="button" class="btn mt-2" id="swap-close">Fechar</button>
+  </div>
+</div>
+
+<footer class="tabbar">
+  <nav>
+    <a class="tab" href="index.html">
+      <img src="img/home.png" alt="Início">
+      <span>Início</span>
+    </a>
+    <a class="tab" href="planejar.html">
+      <img src="img/calendar.png" alt="Planejar">
+      <span>Planejar</span>
+    </a>
+    <a class="tab" href="estoque.html">
+      <img src="img/estoque.png" alt="Estoque">
+      <span>Estoque</span>
+    </a>
+  </nav>
+</footer>
+
+
+<script src="js/app.js"></script>
+</body>
+</html>
