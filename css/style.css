@@ -143,12 +143,17 @@ footer.tabbar {
   bottom: 0;
   left: 0;
   width: 100%;
+  background: var(--mf-white);
+  border-top: var(--mf-border-1) solid rgba(0,0,0,.1);
+  z-index: 999;                            
 }
+
 
 footer.tabbar nav {
   display: flex;
-  flex-direction: row;
   justify-content: space-around;
+  padding: 0.4rem 0;
+  background: inherit;
 }
 
 footer.tabbar .tab {
